@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aven Technologies | Web, Design & Systemen</title>
-  <meta name="description" content="Aven Technologies bouwt websites, onderhoudt ze, doet grafisch ontwerp en implementeert systemen."/>
+  <title>Aven Technologies</title>
+  <meta name="description" content="Aven Technologies bouwt websites, onderhoudt ze, doet grafisch ontwerp en zet systemen op."/>
   <link rel="icon" href="/image/favicon.png"/>
   <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
@@ -21,23 +21,26 @@
         </a>
 
         <nav class="links" aria-label="Hoofdnavigatie">
-          <a data-nav="home" href="/">Home</a>
-          <a data-nav="services" href="/pages/services/">Diensten</a>
-          <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-          <a data-nav="contact" href="/pages/contact/">Contact</a>
+          <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+          <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-nav="partners" data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+          <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
         </nav>
 
         <div class="navRight">
-          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="btn small langBtn" type="button" data-lang-toggle>EN</button>
+          <a class="btn primary" data-i18n="nav_quote" href="/pages/contact/">Offerte aanvragen</a>
           <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
         </div>
       </div>
 
       <div class="mobilePanel" data-mobile-panel>
-        <a data-nav="home" href="/">Home</a>
-        <a data-nav="services" href="/pages/services/">Diensten</a>
-        <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-        <a data-nav="contact" href="/pages/contact/">Contact</a>
+        <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+        <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+        <a data-nav="partners" data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+        <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+        <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
       </div>
     </div>
   </header>
@@ -45,79 +48,66 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="heroGrid">
-          <div>
-            <div class="badge"><span class="dot" aria-hidden="true"></span><span>Web en design voor bedrijven</span></div>
-            <h1 class="h1">Professionele websites, onderhoud en digitale systemen.</h1>
-            <p class="sub">
-              Wij bouwen websites die snel laden en er strak uitzien. We onderhouden bestaande sites, maken grafische assets
-              en zetten systemen op die je werk makkelijker maken.
-            </p>
-            <div class="ctaRow">
-              <a class="btn primary" href="/pages/contact/">Contact</a>
-              <a class="btn" href="/pages/services/">Diensten</a>
-              <a class="btn ghost" href="/pages/klanten/">Klanten</a>
-            </div>
-
-            <div class="section tight" style="padding-bottom:0">
-              <div class="grid3">
-                <div class="feature">
-                  <div class="featureTop"><span class="featureMark" aria-hidden="true"></span><h4>Strak & duidelijk</h4></div>
-                  <p>Geen rommel, gewoon een site die vertrouwen uitstraalt.</p>
-                </div>
-                <div class="feature">
-                  <div class="featureTop"><span class="featureMark" aria-hidden="true"></span><h4>Onderhoud</h4></div>
-                  <p>Updates, backups en snelle aanpassingen wanneer nodig.</p>
-                </div>
-                <div class="feature">
-                  <div class="featureTop"><span class="featureMark" aria-hidden="true"></span><h4>Systemen</h4></div>
-                  <p>Formulieren en integraties die je processen stroomlijnen.</p>
-                </div>
-              </div>
-            </div>
+        <div class="cleanWrap">
+          <h1 class="h1" data-i18n="home_title">Websites en digitale ondersteuning, strak en professioneel.</h1>
+          <p class="sub" data-i18n="home_sub">We bouwen en onderhouden websites, maken grafisch ontwerp en zetten systemen op voor aanvragen, workflows en integraties.</p>
+          <div class="ctaRow">
+            <a class="btn primary" data-i18n="home_cta_contact" href="/pages/contact/">Contact</a>
+            <a class="btn" data-i18n="home_cta_services" href="/pages/services/">Diensten</a>
+            <a class="btn ghost" data-i18n="home_cta_clients" href="/page/klanten/">Klanten</a>
           </div>
-
-          <aside class="card">
-            <div class="cardTitle">
-              <h3>Waarmee we helpen</h3>
-              <div class="pill">Overzicht</div>
-            </div>
-
-            <div class="stack">
-              <div class="row">
-                <div class="tile">
-                  <b>Website bouwen</b>
-                  <p>Nieuwe site of landingpage met goede structuur.</p>
-                </div>
-                <div class="tile">
-                  <b>Website onderhoud</b>
-                  <p>Maandelijkse support, updates en fixes.</p>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="tile">
-                  <b>Grafisch ontwerp</b>
-                  <p>Logo’s, banners, social posts en templates.</p>
-                </div>
-                <div class="tile">
-                  <b>Systemen</b>
-                  <p>Intake flows, koppelingen en dashboards.</p>
-                </div>
-              </div>
-
-              <div class="notice">Stuur je vraag door, dan krijg je een duidelijk voorstel.</div>
-            </div>
-          </aside>
         </div>
       </div>
     </section>
 
     <section class="section tight">
       <div class="container">
-        <h2 class="h2">Duidelijke afspraken, nette oplevering</h2>
-        <p class="lead">Je weet vooraf wat je krijgt en wat het kost. We houden het simpel en professioneel.</p>
-        <div class="hr"></div>
+        <div class="grid3">
+          <div class="feature">
+            <div class="featureTop"><h4 data-i18n="home_f1_t">Website bouwen</h4></div>
+            <p data-i18n="home_f1_d">Nieuwe site of landingpage die snel laadt en goed overkomt.</p>
+          </div>
+          <div class="feature">
+            <div class="featureTop"><h4 data-i18n="home_f2_t">Onderhoud</h4></div>
+            <p data-i18n="home_f2_d">Updates, backups en snelle aanpassingen zonder gedoe.</p>
+          </div>
+          <div class="feature">
+            <div class="featureTop"><h4 data-i18n="home_f3_t">Design & systemen</h4></div>
+            <p data-i18n="home_f3_d">Logo’s, visuals, formulieren en integraties voor je workflow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="card">
+          <div class="split">
+            <div>
+              <h2 class="h2" data-i18n="home_how_title">Werkwijze</h2>
+              <p class="lead" data-i18n="home_how_sub">Kort, duidelijk en met vaste stappen.</p>
+            </div>
+            <div style="display:flex;gap:10px;justify-content:flex-end;align-items:center;flex-wrap:wrap">
+              <a class="btn" data-i18n="home_cta_services" href="/pages/services/">Diensten</a>
+              <a class="btn primary" data-i18n="home_cta_contact" href="/pages/contact/">Contact</a>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="grid3" style="margin-top:14px">
+            <div class="tile">
+              <b data-i18n="home_step1_t">1. Intake</b>
+              <p data-i18n="home_step1_d">Doel, doelgroep en wat het moet opleveren.</p>
+            </div>
+            <div class="tile">
+              <b data-i18n="home_step2_t">2. Voorstel</b>
+              <p data-i18n="home_step2_d">Scope, timing en prijs in één overzicht.</p>
+            </div>
+            <div class="tile">
+              <b data-i18n="home_step3_t">3. Oplevering</b>
+              <p data-i18n="home_step3_d">Live, testen en daarna support of doorontwikkeling.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -126,12 +116,12 @@
         <div class="card">
           <div class="split">
             <div>
-              <h2 class="h2">Klaar om te starten?</h2>
-              <p class="lead">Stuur je vraag door en we nemen contact op.</p>
+              <h2 class="h2" data-i18n="home_bottom_t">Plan iets in</h2>
+              <p class="lead" data-i18n="home_bottom_d">Stuur je vraag en we reageren met de volgende stappen.</p>
             </div>
             <div style="display:flex;gap:12px;justify-content:flex-end;align-items:center;flex-wrap:wrap">
-              <a class="btn primary" href="/pages/contact/">Contact</a>
-              <a class="btn" href="/pages/services/">Diensten</a>
+              <a class="btn primary" data-i18n="home_cta_contact" href="/pages/contact/">Contact</a>
+              <a class="btn" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
             </div>
           </div>
         </div>
@@ -153,9 +143,10 @@
           <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
         </div>
         <div class="footLinks">
-          <a href="/pages/services/">Diensten</a>
-          <a href="/pages/klanten/">Klanten</a>
-          <a href="/pages/contact/">Contact</a>
+          <a data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+          <a data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-i18n="nav_contact" href="/pages/contact/">Contact</a>
           <a href="/pages/privacy/">Privacy</a>
         </div>
       </div>
