@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diensten | Aven Technologies</title>
+  <title>Aven Technologies</title>
   <meta name="description" content="Diensten: websites, onderhoud, grafisch ontwerp en systemen."/>
   <link rel="icon" href="/image/favicon.png"/>
   <link rel="stylesheet" href="/assets/styles.css"/>
@@ -14,30 +14,30 @@
       <div class="nav">
         <a class="brand" href="/">
           <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
-          <div>
-            <span>Aven Technologies</span>
-            <small>Web • Design • Systemen</small>
-          </div>
+          <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
         </a>
 
         <nav class="links" aria-label="Hoofdnavigatie">
-          <a data-nav="home" href="/">Home</a>
-          <a data-nav="services" href="/pages/services/">Diensten</a>
-          <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-          <a data-nav="contact" href="/pages/contact/">Contact</a>
+          <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+          <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-nav="partners" data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+          <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
         </nav>
 
         <div class="navRight">
-          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="btn small langBtn" type="button" data-lang-toggle>EN</button>
+          <a class="btn primary" data-i18n="nav_quote" href="/pages/contact/">Offerte aanvragen</a>
           <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
         </div>
       </div>
 
       <div class="mobilePanel" data-mobile-panel>
-        <a data-nav="home" href="/">Home</a>
-        <a data-nav="services" href="/pages/services/">Diensten</a>
-        <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-        <a data-nav="contact" href="/pages/contact/">Contact</a>
+        <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+        <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+        <a data-nav="partners" data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+        <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+        <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
       </div>
     </div>
   </header>
@@ -45,9 +45,9 @@
   <main>
     <section class="pageHead">
       <div class="container">
-        <div class="breadcrumb">Diensten</div>
-        <h1 class="pageTitle">Diensten</h1>
-        <p class="pageDesc">Van website tot onderhoud, van visuals tot systemen. Kies wat je nodig hebt.</p>
+        <div class="breadcrumb">Aven / <span data-i18n="services_title">Diensten</span></div>
+        <h1 class="pageTitle" data-i18n="services_title">Diensten</h1>
+        <p class="pageDesc" data-i18n="services_desc">Van website tot onderhoud, van visuals tot systemen. Kies wat je nodig hebt.</p>
       </div>
     </section>
 
@@ -55,38 +55,38 @@
       <div class="container">
         <div class="grid2">
           <div class="card">
-            <div class="cardTitle"><h3>Websites</h3><div class="pill">Design + Build</div></div>
+            <div class="cardTitle"><h3 data-i18n="services_web_t">Websites</h3><div class="pill" data-i18n="services_web_p">Design + Build</div></div>
             <div class="stack">
-              <div class="tile"><b>Bedrijfssites</b><p>Professioneel, snel en mobielvriendelijk.</p></div>
-              <div class="tile"><b>Landingspagina’s</b><p>Voor campagnes en leadgeneratie.</p></div>
-              <div class="tile"><b>Redesign</b><p>Nieuwe look en betere structuur voor je bestaande site.</p></div>
+              <div class="tile"><b data-i18n="services_web_1_t">Bedrijfssites</b><p data-i18n="services_web_1_d">Professioneel, snel en mobielvriendelijk.</p></div>
+              <div class="tile"><b data-i18n="services_web_2_t">Landingspagina’s</b><p data-i18n="services_web_2_d">Voor campagnes en leadgeneratie.</p></div>
+              <div class="tile"><b data-i18n="services_web_3_t">Redesign</b><p data-i18n="services_web_3_d">Nieuwe look en betere structuur voor je bestaande site.</p></div>
             </div>
           </div>
 
           <div class="card">
-            <div class="cardTitle"><h3>Onderhoud</h3><div class="pill">Maandelijks</div></div>
+            <div class="cardTitle"><h3 data-i18n="services_maint_t">Onderhoud</h3><div class="pill" data-i18n="services_maint_p">Maandelijks</div></div>
             <div class="stack">
-              <div class="tile"><b>Updates</b><p>Content en technische updates zonder vertraging.</p></div>
-              <div class="tile"><b>Backups</b><p>Regelmatige backups en herstelplan.</p></div>
-              <div class="tile"><b>Fixes</b><p>Snel oplossen van kleine issues en bugs.</p></div>
+              <div class="tile"><b data-i18n="services_maint_1_t">Updates</b><p data-i18n="services_maint_1_d">Content en technische updates zonder vertraging.</p></div>
+              <div class="tile"><b data-i18n="services_maint_2_t">Backups</b><p data-i18n="services_maint_2_d">Regelmatige backups en herstelplan.</p></div>
+              <div class="tile"><b data-i18n="services_maint_3_t">Fixes</b><p data-i18n="services_maint_3_d">Snel oplossen van kleine issues en bugs.</p></div>
             </div>
           </div>
 
           <div class="card">
-            <div class="cardTitle"><h3>Grafisch ontwerp</h3><div class="pill">Brand + Visuals</div></div>
+            <div class="cardTitle"><h3 data-i18n="services_design_t">Grafisch ontwerp</h3><div class="pill" data-i18n="services_design_p">Brand + Visuals</div></div>
             <div class="stack">
-              <div class="tile"><b>Logo & huisstijl</b><p>Basis voor een consistente uitstraling.</p></div>
-              <div class="tile"><b>Social visuals</b><p>Templates en posts die je kan hergebruiken.</p></div>
-              <div class="tile"><b>Marketing</b><p>Banners, flyers, PDF’s en drukwerkbestanden.</p></div>
+              <div class="tile"><b data-i18n="services_design_1_t">Logo & huisstijl</b><p data-i18n="services_design_1_d">Basis voor een consistente uitstraling.</p></div>
+              <div class="tile"><b data-i18n="services_design_2_t">Social visuals</b><p data-i18n="services_design_2_d">Templates en posts die je kan hergebruiken.</p></div>
+              <div class="tile"><b data-i18n="services_design_3_t">Marketing</b><p data-i18n="services_design_3_d">Banners, flyers, PDF’s en drukwerkbestanden.</p></div>
             </div>
           </div>
 
           <div class="card">
-            <div class="cardTitle"><h3>Systemen</h3><div class="pill">Workflows</div></div>
+            <div class="cardTitle"><h3 data-i18n="services_sys_t">Systemen</h3><div class="pill" data-i18n="services_sys_p">Workflows</div></div>
             <div class="stack">
-              <div class="tile"><b>Formulieren</b><p>Intake, aanvragen en opvolging.</p></div>
-              <div class="tile"><b>Integraties</b><p>Koppelingen met tools die je al gebruikt.</p></div>
-              <div class="tile"><b>Dashboards</b><p>Overzicht en rapportering.</p></div>
+              <div class="tile"><b data-i18n="services_sys_1_t">Formulieren</b><p data-i18n="services_sys_1_d">Intake, aanvragen en opvolging.</p></div>
+              <div class="tile"><b data-i18n="services_sys_2_t">Integraties</b><p data-i18n="services_sys_2_d">Koppelingen met tools die je al gebruikt.</p></div>
+              <div class="tile"><b data-i18n="services_sys_3_t">Dashboards</b><p data-i18n="services_sys_3_d">Overzicht en rapportering.</p></div>
             </div>
           </div>
         </div>
@@ -94,16 +94,15 @@
         <div class="card" style="margin-top:18px">
           <div class="split">
             <div>
-              <h2 class="h2">Even afstemmen?</h2>
-              <p class="lead">Stuur je vraag door en we maken het concreet.</p>
+              <h2 class="h2" data-i18n="services_cta_t">Even afstemmen?</h2>
+              <p class="lead" data-i18n="services_cta_d">Stuur je vraag door en we maken het concreet.</p>
             </div>
             <div style="display:flex;gap:12px;justify-content:flex-end;align-items:center;flex-wrap:wrap">
-              <a class="btn primary" href="/pages/contact/">Contact</a>
-              <a class="btn" href="/pages/klanten/">Klanten</a>
+              <a class="btn primary" data-i18n="services_cta_contact" href="/pages/contact/">Contact</a>
+              <a class="btn" data-i18n="services_cta_partners" href="/pages/partners/">Partners</a>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   </main>
@@ -119,9 +118,10 @@
           <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
         </div>
         <div class="footLinks">
-          <a href="/">Home</a>
-          <a href="/pages/klanten/">Klanten</a>
-          <a href="/pages/contact/">Contact</a>
+          <a data-i18n="nav_home" href="/">Home</a>
+          <a data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+          <a data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-i18n="nav_contact" href="/pages/contact/">Contact</a>
           <a href="/pages/privacy/">Privacy</a>
         </div>
       </div>
