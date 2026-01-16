@@ -91,9 +91,7 @@ function renderPartnerCard(row) {
   const type = row.type || row.Type || "";
   const tags = normalizeTagList(row.tags || row.Tags || row.labels || row.Labels);
 
-  const card = el("div", { class: "partner" }, [
-    el("h4", {}, [String(name)])
-  ]);
+  const card = el("div", { class: "partner" }, [ el("h4", {}, [String(name)]) ]);
 
   if (description) card.appendChild(el("p", {}, [String(description)]));
 
