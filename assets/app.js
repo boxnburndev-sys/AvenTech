@@ -30,7 +30,7 @@ function setupContactForm() {
   const btn = form.querySelector('button[type="submit"]');
 
   const accessKey = keyInput?.value?.trim();
-  if (!accessKey || accessKey === "PLAK_HIER_JE_WEB3FORMS_SLEUTEL") {
+  if (!accessKey || accessKey === "3ffced50-69c6-4348-adfb-1f1b1d2bb1db") {
     if (status) {
       status.className = "notice bad";
       status.innerHTML = "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
@@ -156,7 +156,7 @@ async function setupPartnersFromApi() {
 
     if (status) { status.className = "notice ok"; status.innerHTML = "<b>Klaar.</b> De lijst is bijgewerkt."; }
   } catch (e) {
-    if (status) { status.className = "notice bad"; status.innerHTML = "<b>Niet gelukt.</b> Controleer Vercel ENV en SeaTable instellingen."; }
+    if (status) { status.className = "notice bad"; status.innerHTML = "<b>Niet gelukt.</b> Controleer Database."; }
   }
 }
 
