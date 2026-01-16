@@ -30,7 +30,7 @@ function setupContactForm() {
   const btn = form.querySelector('button[type="submit"]');
 
   const accessKey = keyInput?.value?.trim();
-  if (!accessKey || accessKey === "PLAK_HIER_JE_WEB3FORMS_SLEUTEL") {
+  if (!accessKey || accessKey === "3ffced50-69c6-4348-adfb-1f1b1d2bb1db") {
     if (status) {
       status.className = "notice bad";
       status.innerHTML = "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
@@ -162,7 +162,7 @@ async function setupPartnersFromSeaTable() {
   if (!serverUrl || !apiToken) {
     if (status) {
       status.className = "notice bad";
-      status.innerHTML = "<b>Instellen:</b> Voeg je SeaTable server-url en API token toe om partners te laden.";
+      status.innerHTML = "<b>Instellen:</b> Voeg je SeaTable server url en API token toe om partners te laden.";
     }
     return;
   }
