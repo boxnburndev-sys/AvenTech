@@ -30,7 +30,7 @@ function setupContactForm() {
   const btn = form.querySelector('button[type="submit"]');
 
   const accessKey = keyInput?.value?.trim();
-  if (!accessKey || accessKey === "3ffced50-69c6-4348-adfb-1f1b1d2bb1db") {
+if (!accessKey || accessKey === "3ffced50-69c6-4348-adfb-1f1b1d2bb1db") {
     if (status) {
       status.className = "notice bad";
       status.innerHTML = "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
@@ -84,27 +84,76 @@ function normalizeTagList(raw) {
   return String(raw).split(",").map((s) => s.trim()).filter(Boolean);
 }
 
+function normalizeUrl(u) {
+  const s = String(u || "").trim();
+  if (!s) return "";
+  if (s.startsWith("http://") || s.startsWith("https://")) return s;
+  return `https://${s}`;
+}
+
+function pickFirstImageUrl(raw) {
+  if (!raw) return "";
+  if (typeof raw === "string") return raw.trim();
+
+  if (Array.isArray(raw)) {
+    const first = raw[0];
+    if (!first) return "";
+    if (typeof first === "string") return first.trim();
+    if (typeof first === "object") {
+      return String(first.url || first.download_link || first.link || first.src || "").trim();
+    }
+    return "";
+  }
+
+  if (typeof raw === "object") {
+    return String(raw.url || raw.download_link || raw.link || raw.src || "").trim();
+  }
+
+  return "";
+}
+
+function isGraphicalWork(type) {
+  const t = String(type || "").trim().toLowerCase();
+  return t === "graphical work" || t === "grafisch werk" || t === "grafisch" || t === "design";
+}
+
 function renderPartnerCard(row) {
-  const name = row.naam || row.Naam || row.name || row.Name || "Partner";
-  const description = row.beschrijving || row.Beschrijving || row.description || row.Description || "";
-  const website = row.website || row.Website || row.url || row.URL || row.Url || "";
-  const type = row.type || row.Type || "";
-  const tags = normalizeTagList(row.tags || row.Tags || row.labels || row.Labels);
+  const name = row.Naam || row.name || row.Name || "Partner";
+  const description = (row.Beschrijving || row.description || row.Description || "").toString().trim();
+  const websiteRaw = row.Website || row.website || row.URL || row.url || "";
+  const website = normalizeUrl(websiteRaw);
+  const status = (row.Status || row.status || "").toString().trim();
+  const type = (row.Type || row.type || "").toString().trim();
+  const tags = normalizeTagList(row.Tags || row.tags || row.labels || row.Labels);
+  const imageUrl = pickFirstImageUrl(row.Image || row.image);
 
-  const card = el("div", { class: "partner" }, [ el("h4", {}, [String(name)]) ]);
+  const card = el("div", { class: "partner" }, [
+    el("h4", {}, [String(name)])
+  ]);
 
-  if (description) card.appendChild(el("p", {}, [String(description)]));
+  if (description) card.appendChild(el("p", {}, [description]));
 
   const tagWrap = el("div", { class: "tags" }, []);
-  if (type) tagWrap.appendChild(el("span", { class: "tag" }, [String(type)]));
+  if (status) tagWrap.appendChild(el("span", { class: "tag" }, [status]));
+  if (type) tagWrap.appendChild(el("span", { class: "tag" }, [type]));
   tags.forEach((t) => tagWrap.appendChild(el("span", { class: "tag" }, [String(t)])));
-  if (type || tags.length) card.appendChild(tagWrap);
+  if (status || type || tags.length) card.appendChild(tagWrap);
+
+  if (isGraphicalWork(type) && imageUrl) {
+    card.appendChild(
+      el("img", {
+        src: imageUrl,
+        alt: String(name),
+        style: "width:100%;border-radius:12px;border:1px solid var(--stroke);background:var(--panel2)"
+      })
+    );
+  }
 
   if (website) {
     card.appendChild(
       el("a", {
         class: "btn",
-        href: String(website),
+        href: website,
         target: "_blank",
         rel: "noopener noreferrer",
         style: "margin-top:10px; justify-content:flex-start"
@@ -119,15 +168,15 @@ async function setupPartnersFromApi() {
   const root = document.querySelector("[data-partners]");
   if (!root) return;
 
-  const status = document.querySelector("[data-partners-status]");
+  const statusEl = document.querySelector("[data-partners-status]");
   const currentWrap = document.querySelector("[data-partners-current]");
   const pastWrap = document.querySelector("[data-partners-past]");
 
-  const currentValue = root.getAttribute("data-current-value") || "Actueel";
-  const pastValue = root.getAttribute("data-past-value") || "Eerder";
+  const currentValue = root.getAttribute("data-current-value") || "Online";
+  const pastValue = root.getAttribute("data-past-value") || "Offline";
 
   try {
-    if (status) { status.className = "notice"; status.textContent = "Laden…"; }
+    if (statusEl) { statusEl.className = "notice"; statusEl.textContent = "Laden…"; }
 
     const res = await fetch("/api/partners", { method: "GET" });
     if (!res.ok) throw new Error("API error");
@@ -138,7 +187,7 @@ async function setupPartnersFromApi() {
     const past = [];
 
     rows.forEach((r) => {
-      const kind = String(r.status || r.Status || r.categorie || r.Categorie || r.category || r.Category || "").trim();
+      const kind = String(r.Status || r.status || "").trim();
       if (kind.toLowerCase() === currentValue.toLowerCase()) current.push(r);
       else if (kind.toLowerCase() === pastValue.toLowerCase()) past.push(r);
       else current.push(r);
@@ -154,9 +203,9 @@ async function setupPartnersFromApi() {
       past.forEach((r) => pastWrap.appendChild(renderPartnerCard(r)));
     }
 
-    if (status) { status.className = "notice ok"; status.innerHTML = "<b>Klaar.</b> De lijst is bijgewerkt."; }
+    if (statusEl) { statusEl.className = "notice ok"; statusEl.innerHTML = "<b>Klaar.</b> Partners zijn bijgewerkt."; }
   } catch (e) {
-    if (status) { status.className = "notice bad"; status.innerHTML = "<b>Niet gelukt.</b> Controleer Database."; }
+    if (statusEl) { statusEl.className = "notice bad"; statusEl.innerHTML = "<b>Niet gelukt.</b> Controleer de API en SeaTable instellingen."; }
   }
 }
 
