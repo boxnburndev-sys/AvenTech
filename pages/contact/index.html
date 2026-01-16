@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Aven Technologies</title>
-  <meta name="description" content="Neem contact op met Aven Technologies."/>
+  <title>Aven Technologies</title>
+  <meta name="description" content="Contacteer Aven Technologies voor websites, onderhoud, grafisch ontwerp en systemen."/>
   <link rel="icon" href="/image/favicon.png"/>
   <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
@@ -47,7 +47,9 @@
       <div class="container">
         <div class="breadcrumb">Aven / Contact</div>
         <h1 class="pageTitle">Contact opnemen</h1>
-        <p class="pageDesc">Stuur je vraag of projectinfo. Hoe concreter, hoe sneller we kunnen schakelen.</p>
+        <p class="pageDesc">
+          Vertel kort wat je nodig hebt. We reageren meestal binnen 1 werkdag met de volgende stappen.
+        </p>
       </div>
     </section>
 
@@ -60,7 +62,7 @@
               <div class="pill">Web3Forms</div>
             </div>
 
-            <div class="notice" data-form-status>Vul het formulier in en verzend je bericht.</div>
+            <div class="notice" data-form-status>Vul het formulier in. Je ziet een bevestiging na verzending.</div>
 
             <form class="form" data-web3form>
               <input type="hidden" name="access_key" value="PLAK_HIER_JE_WEB3FORMS_SLEUTEL">
@@ -78,10 +80,39 @@
                 </div>
               </div>
 
+              <div class="formRow">
+                <div class="field">
+                  <label for="bedrijf">Bedrijf</label>
+                  <input id="bedrijf" name="company" type="text" placeholder="Bedrijfsnaam">
+                </div>
+                <div class="field">
+                  <label for="dienst">Waarover gaat het?</label>
+                  <select id="dienst" name="service" required>
+                    <option value="" selected disabled>Kies een optie</option>
+                    <option>Website</option>
+                    <option>Onderhoud</option>
+                    <option>Grafisch ontwerp</option>
+                    <option>Systemen</option>
+                    <option>Combinatie</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div class="field">
+                  <label for="budget">Budget (optioneel)</label>
+                  <input id="budget" name="budget" type="text" placeholder="Bijv. €1.000–€3.000">
+                </div>
+                <div class="field">
+                  <label for="timing">Timing (optioneel)</label>
+                  <input id="timing" name="timing" type="text" placeholder="Bijv. binnen 2–4 weken">
+                </div>
+              </div>
+
               <div class="field">
                 <label for="bericht">Bericht</label>
-                <textarea id="bericht" name="message" placeholder="Waar kunnen we mee helpen?" required></textarea>
-                <small class="hint">Tip: voeg links, timing en budgetrange toe als je die hebt.</small>
+                <textarea id="bericht" name="message" placeholder="Wat wil je bouwen of verbeteren? Link naar je huidige site als die er is." required></textarea>
+                <small class="hint">Hoe concreter je vraag, hoe sneller we een duidelijke offerte kunnen maken.</small>
               </div>
 
               <button class="btn primary" type="submit">Verzenden</button>
@@ -90,15 +121,28 @@
 
           <div class="card">
             <div class="cardTitle">
-              <h3>Info</h3>
-              <div class="pill">Snel</div>
+              <h3>Gegevens</h3>
+              <div class="pill">Snel contact</div>
             </div>
 
             <div class="stack">
-              <div class="tile"><b>E-mail</b><p>info@aventechnologies.be</p></div>
-              <div class="tile"><b>Reactietijd</b><p>Meestal binnen 1 werkdag.</p></div>
-              <div class="tile"><b>Werkgebied</b><p>België en remote.</p></div>
-              <div class="notice">Zet je voorkeur (mail/meeting) in je bericht, dan plannen we het efficiënt.</div>
+              <div class="tile">
+                <b>E-mail</b>
+                <p>info@aventechnologies.be</p>
+              </div>
+              <div class="tile">
+                <b>Reactietijd</b>
+                <p>Meestal binnen 1 werkdag.</p>
+              </div>
+              <div class="tile">
+                <b>Werkwijze</b>
+                <p>Korte intake, voorstel, start. Transparant en zonder gedoe.</p>
+              </div>
+              <div class="notice">
+                Wil je dat we terugbellen of een korte call doen? Zet het in je bericht, samen met je beschikbaarheid.
+              </div>
+              <a class="btn" href="/pages/services/" style="justify-content:flex-start">Diensten bekijken</a>
+              <a class="btn ghost" href="/pages/partners/" style="justify-content:flex-start">Partners</a>
             </div>
           </div>
         </div>
@@ -112,7 +156,10 @@
         <div>
           <div class="brand" style="gap:10px">
             <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
-            <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
+            <div>
+              <span>Aven Technologies</span>
+              <small>Web • Design • Systemen</small>
+            </div>
           </div>
           <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
         </div>
