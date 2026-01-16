@@ -16,7 +16,6 @@ async function seatableListRowsGateway({ serverUrl, accessToken, baseUuid, table
   if (viewName) qs.set("view_name", viewName);
   qs.set("limit", "200");
   qs.set("convert_keys", "true");
-
   const url = `${base}/api-gateway/api/v2/dtables/${encodeURIComponent(baseUuid)}/rows/?${qs.toString()}`;
   const res = await fetch(url, { method: "GET", headers: { Authorization: `Token ${accessToken}` } });
   const text = await res.text().catch(() => "");
