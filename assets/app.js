@@ -33,7 +33,7 @@ function setupContactForm() {
 if (!accessKey || accessKey === "3ffced50-69c6-4348-adfb-1f1b1d2bb1db") {
     if (status) {
       status.className = "notice bad";
-      status.innerHTML = "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
+      status.innerHTML = "";
     }
   }
 
