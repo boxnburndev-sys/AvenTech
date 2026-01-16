@@ -133,21 +133,6 @@ a:hover{opacity:.98}
 }
 .ctaRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 
-.kpis{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap:12px;
-  margin-top:18px;
-}
-.kpi{
-  border:1px solid var(--stroke);
-  background: var(--panel);
-  border-radius: 14px;
-  padding:14px;
-}
-.kpi strong{display:block;font-size:15px;letter-spacing:-.2px}
-.kpi span{color:var(--muted2);font-weight:700;font-size:12px;line-height:1.4;display:block;margin-top:6px}
-
 .card{
   border:1px solid var(--stroke);
   background: var(--panel);
@@ -196,19 +181,14 @@ a:hover{opacity:.98}
   padding:16px;
   box-shadow: 0 8px 18px rgba(2,6,23,.05);
 }
-.feature h4{margin:0 0 8px;font-size:15px;letter-spacing:-.2px}
-.feature p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}
-.featureTop{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-bottom:10px;
-}
+.featureTop{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .featureMark{
   width:10px;height:10px;border-radius:999px;
   background: rgba(37,99,235,.25);
   border:1px solid rgba(37,99,235,.25);
 }
+.feature h4{margin:0;font-size:15px;letter-spacing:-.2px}
+.feature p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 
