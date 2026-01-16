@@ -73,16 +73,16 @@ const I18N = {
     services_cta_t: "Even afstemmen?",
     services_cta_d: "Stuur je vraag door en we maken het concreet.",
     services_cta_contact: "Contact",
-    services_cta_partners: "Partners",
+    services_cta_partners: "Klanten",
 
-    partners_title: "Partners",
-    partners_desc: "Actuele partners en eerdere samenwerkingen. Deze lijst wordt automatisch bijgewerkt.",
+    partners_title: "Klanten",
+    partners_desc: "Actuele klanten en eerdere projecten. Deze lijst wordt automatisch bijgewerkt.",
     partners_overview: "Overzicht",
     partners_live: "Live",
     partners_current: "Actueel",
     partners_past: "Eerder",
     partners_status_loading: "Laden…",
-    partners_status_ok: "Klaar. Partners zijn bijgewerkt.",
+    partners_status_ok: "Klaar. Klanten zijn bijgewerkt.",
     partners_status_bad: "Niet gelukt. Controleer de API en SeaTable instellingen.",
     partners_btn_site: "Website",
 
@@ -115,18 +115,32 @@ const I18N = {
     contact_way_d: "Korte intake, voorstel, start. Duidelijk en professioneel.",
     contact_note: "Wil je een korte call? Zet je beschikbaarheid in je bericht.",
     contact_services_btn: "Diensten bekijken",
-    contact_partners_btn: "Partners",
+    contact_partners_btn: "Klanten",
 
     privacy_title: "Privacy",
-    privacy_desc: "Kort overzicht van hoe we met gegevens omgaan.",
-    privacy_a_t: "Gegevens",
-    privacy_a_d: "We ontvangen enkel wat je zelf invult in het contactformulier.",
-    privacy_b_t: "Doel",
-    privacy_b_d: "Je aanvraag behandelen, contact opnemen en eventueel een offerte maken.",
-    privacy_c_t: "Bewaring",
-    privacy_c_d: "Niet langer dan nodig voor opvolging en administratie.",
-    privacy_d_t: "Contact",
-    privacy_d_d: "Vragen? Mail naar info@aventechnologies.be."
+    privacy_desc: "Hoe we met gegevens omgaan, volgens de AVG (GDPR) en Belgische regels.",
+    privacy_intro_html: "<b>Samenvatting:</b> we verwerken alleen gegevens die je zelf invult in het contactformulier. We verkopen geen data.",
+    privacy_controller_t: "Verwerkingsverantwoordelijke",
+    privacy_controller_html: "Aven Technologies<br>Contact: <b>info@aventechnologies.be</b>",
+    privacy_data_t: "Welke gegevens verwerken we?",
+    privacy_data_html: "Gegevens die je zelf doorstuurt via het contactformulier (bv. naam, e-mail, bedrijf, inhoud van je bericht).",
+    privacy_purpose_t: "Doeleinden & rechtsgrond",
+    privacy_purpose_html: "We gebruiken je gegevens om je aanvraag te behandelen, contact op te nemen en eventueel een offerte/voorstel op te maken.<br>Rechtsgrond: <b>gerechtvaardigd belang</b> (communicatie met (potentiële) klanten) en/of <b>uitvoering van precontractuele stappen</b> wanneer je om een offerte vraagt.",
+    privacy_retention_t: "Bewaartermijn",
+    privacy_retention_html: "Contactaanvragen bewaren we maximaal <b>24 maanden</b> voor opvolging. Offertes/administratieve communicatie kan langer bewaard worden indien nodig voor boekhouding of geschillen.",
+    privacy_processors_t: "Ontvangers & verwerkers",
+    privacy_processors_html: "We delen je gegevens alleen waar nodig:<br><b>Web3Forms</b> (verzenden van het contactformulier),<br><b>Vercel</b> (hosting van de website),<br><b>SeaTable</b> (database voor klantenlijst, indien actief).<br>We geven geen gegevens door aan derden voor marketing.",
+    privacy_transfers_t: "Doorgifte buiten de EER",
+    privacy_transfers_html: "Sommige dienstverleners kunnen gegevens buiten de EER verwerken. In dat geval gebeuren doorgiftes via passende waarborgen (bv. standaardcontractbepalingen) volgens de AVG.",
+    privacy_rights_t: "Jouw rechten",
+    privacy_rights_html: "Je hebt recht op inzage, verbetering, verwijdering, beperking, bezwaar en overdraagbaarheid (waar van toepassing).<br>Je kan je rechten uitoefenen via <b>info@aventechnologies.be</b>.",
+    privacy_complaint_t: "Klacht",
+    privacy_complaint_html: "Je kan een klacht indienen bij de <b>Gegevensbeschermingsautoriteit</b> (België) als je vindt dat je rechten niet gerespecteerd worden.",
+    privacy_cookies_t: "Cookies & tracking",
+    privacy_cookies_html: "Deze website plaatst <b>geen marketing- of trackingcookies</b> en gebruikt geen cookiebanner.<br>Als we in de toekomst niet-strikt noodzakelijke cookies zouden gebruiken, vragen we eerst toestemming volgens de Belgische e-privacyregels.",
+    privacy_storage_t: "Lokale opslag",
+    privacy_storage_html: "We gebruiken enkel <b>lokale opslag</b> in je browser om je taalkeuze (NL/EN) te onthouden. Dit is geen tracking.",
+    privacy_update_html: "Laatst bijgewerkt: <b>2026-01-16</b>"
   },
 
   en: {
@@ -203,16 +217,16 @@ const I18N = {
     services_cta_t: "Want to align?",
     services_cta_d: "Send your request and we’ll make it concrete.",
     services_cta_contact: "Contact",
-    services_cta_partners: "Partners",
+    services_cta_partners: "Clients",
 
-    partners_title: "Partners",
-    partners_desc: "Current partners and previous collaborations. Automatically updated from the database.",
+    partners_title: "Clients",
+    partners_desc: "Current clients and previous projects. Automatically updated from the database.",
     partners_overview: "Overview",
     partners_live: "Live",
     partners_current: "Current",
     partners_past: "Previous",
     partners_status_loading: "Loading…",
-    partners_status_ok: "Done. Partners updated.",
+    partners_status_ok: "Done. Clients updated.",
     partners_status_bad: "Failed. Check the API and SeaTable settings.",
     partners_btn_site: "Website",
 
@@ -245,18 +259,32 @@ const I18N = {
     contact_way_d: "Short intake, proposal, start. Clear and professional.",
     contact_note: "Want a short call? Add your availability in the message.",
     contact_services_btn: "View services",
-    contact_partners_btn: "Partners",
+    contact_partners_btn: "Clients",
 
     privacy_title: "Privacy",
-    privacy_desc: "A short overview of how we handle data.",
-    privacy_a_t: "Data",
-    privacy_a_d: "We only receive what you submit via the contact form.",
-    privacy_b_t: "Purpose",
-    privacy_b_d: "Handle your request, contact you and optionally prepare a proposal.",
-    privacy_c_t: "Retention",
-    privacy_c_d: "Not longer than needed for follow-up and administration.",
-    privacy_d_t: "Contact",
-    privacy_d_d: "Questions? Email info@aventechnologies.be."
+    privacy_desc: "How we handle data, in line with GDPR and Belgian rules.",
+    privacy_intro_html: "<b>Summary:</b> we only process the data you submit through the contact form. We do not sell data.",
+    privacy_controller_t: "Data controller",
+    privacy_controller_html: "Aven Technologies<br>Contact: <b>info@aventechnologies.be</b>",
+    privacy_data_t: "What data do we process?",
+    privacy_data_html: "Data you submit via the contact form (e.g., name, email, company, message content).",
+    privacy_purpose_t: "Purposes & legal basis",
+    privacy_purpose_html: "We use your data to handle your request, contact you, and optionally prepare a quote/proposal.<br>Legal basis: <b>legitimate interests</b> (communication with (prospective) clients) and/or <b>pre-contractual steps</b> when you request a quote.",
+    privacy_retention_t: "Retention",
+    privacy_retention_html: "Contact requests are kept for up to <b>24 months</b> for follow-up. Quotes/administrative communication may be retained longer when required for accounting or disputes.",
+    privacy_processors_t: "Recipients & processors",
+    privacy_processors_html: "We only share data where needed:<br><b>Web3Forms</b> (contact form delivery),<br><b>Vercel</b> (website hosting),<br><b>SeaTable</b> (clients list database, if enabled).<br>We do not share data with third parties for marketing.",
+    privacy_transfers_t: "Transfers outside the EEA",
+    privacy_transfers_html: "Some providers may process data outside the EEA. Where applicable, transfers are protected through appropriate safeguards (e.g., Standard Contractual Clauses) under GDPR.",
+    privacy_rights_t: "Your rights",
+    privacy_rights_html: "You have the right to access, rectification, deletion, restriction, objection, and portability (where applicable).<br>Exercise your rights via <b>info@aventechnologies.be</b>.",
+    privacy_complaint_t: "Complaint",
+    privacy_complaint_html: "You can file a complaint with the <b>Belgian Data Protection Authority</b> if you believe your rights are not respected.",
+    privacy_cookies_t: "Cookies & tracking",
+    privacy_cookies_html: "This website uses <b>no marketing or tracking cookies</b> and does not use a cookie banner.<br>If we ever add non-essential cookies, we will ask for consent first under Belgian e-privacy rules.",
+    privacy_storage_t: "Local storage",
+    privacy_storage_html: "We only use <b>local storage</b> in your browser to remember your language choice (NL/EN). This is not tracking.",
+    privacy_update_html: "Last updated: <b>2026-01-16</b>"
   }
 };
 
@@ -277,42 +305,20 @@ function applyI18n() {
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (!key) return;
     const val = dict[key];
-    if (typeof val !== "string") return;
-    el.textContent = val;
+    if (typeof val === "string") el.textContent = val;
   });
 
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.getAttribute("data-i18n-html");
-    if (!key) return;
     const val = dict[key];
-    if (typeof val !== "string") return;
-    el.innerHTML = val;
+    if (typeof val === "string") el.innerHTML = val;
   });
 
   document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const key = el.getAttribute("data-i18n-placeholder");
-    if (!key) return;
     const val = dict[key];
-    if (typeof val !== "string") return;
-    el.setAttribute("placeholder", val);
-  });
-
-  document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-aria");
-    if (!key) return;
-    const val = dict[key];
-    if (typeof val !== "string") return;
-    el.setAttribute("aria-label", val);
-  });
-
-  document.querySelectorAll("[data-i18n-title]").forEach((el) => {
-    const key = el.getAttribute("data-i18n-title");
-    if (!key) return;
-    const val = dict[key];
-    if (typeof val !== "string") return;
-    el.setAttribute("title", val);
+    if (typeof val === "string") el.setAttribute("placeholder", val);
   });
 
   const langBtn = document.querySelector("[data-lang-toggle]");
@@ -323,8 +329,7 @@ function setupLangToggle() {
   const btn = document.querySelector("[data-lang-toggle]");
   if (!btn) return;
   btn.addEventListener("click", () => {
-    const next = getLang() === "en" ? "nl" : "en";
-    setLang(next);
+    setLang(getLang() === "en" ? "nl" : "en");
     applyI18n();
     updatePartnersUiLanguage();
   });
@@ -365,7 +370,9 @@ function setupContactForm() {
   if (!accessKey || accessKey === "PLAK_HIER_JE_WEB3FORMS_SLEUTEL") {
     if (status) {
       status.className = "notice bad";
-      status.innerHTML = "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
+      status.innerHTML = getLang() === "en"
+        ? "<b>Setup:</b> Add your Web3Forms access key to activate the form."
+        : "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
     }
   }
 
@@ -384,15 +391,21 @@ function setupContactForm() {
       const data = await res.json();
       if (data.success) {
         status.className = "notice ok";
-        status.innerHTML = getLang() === "en" ? "<b>Sent.</b> We will contact you soon." : "<b>Verzonden.</b> We nemen snel contact op.";
+        status.innerHTML = getLang() === "en"
+          ? "<b>Sent.</b> We will contact you soon."
+          : "<b>Verzonden.</b> We nemen snel contact op.";
         form.reset();
       } else {
         status.className = "notice bad";
-        status.innerHTML = getLang() === "en" ? "<b>Failed.</b> Please try again." : "<b>Niet gelukt.</b> Probeer opnieuw of stuur ons een e-mail.";
+        status.innerHTML = getLang() === "en"
+          ? "<b>Failed.</b> Please try again."
+          : "<b>Niet gelukt.</b> Probeer opnieuw of stuur ons een e-mail.";
       }
     } catch (err) {
       status.className = "notice bad";
-      status.innerHTML = getLang() === "en" ? "<b>Network error.</b> Please try again." : "<b>Netwerkfout.</b> Probeer opnieuw of stuur ons een e-mail.";
+      status.innerHTML = getLang() === "en"
+        ? "<b>Network error.</b> Please try again."
+        : "<b>Netwerkfout.</b> Probeer opnieuw of stuur ons een e-mail.";
     } finally {
       if (btn) { btn.disabled = false; btn.style.opacity = "1"; }
     }
@@ -443,7 +456,7 @@ function isGraphicalWork(type) {
 }
 
 function renderPartnerCard(row, opts) {
-  const name = (row.Naam || row.name || row.Name || "Partner").toString().trim() || "Partner";
+  const name = (row.Naam || row.name || row.Name || "Klant").toString().trim() || "Klant";
   const description = (row.Beschrijving || row.description || row.Description || "").toString().trim();
   const websiteRaw = row.Website || row.website || row.URL || row.url || "";
   const website = normalizeUrl(websiteRaw);
@@ -476,7 +489,7 @@ function renderPartnerCard(row, opts) {
 
   if (website) {
     const dict = I18N[getLang()] || I18N.nl;
-    const label = opts?.btnKey ? (dict[opts.btnKey] || dict.partners_btn_site || "Website") : (dict.partners_btn_site || "Website");
+    const label = dict.partners_btn_site || "Website";
     card.appendChild(
       el("a", {
         class: "btn",
@@ -497,31 +510,22 @@ function updatePartnersUiLanguage() {
   const lang = getLang();
   const dict = I18N[lang] || I18N.nl;
 
-  if (document.querySelector("[data-partners]")) {
+  const partnersRoot = document.querySelector("[data-partners]");
+  if (partnersRoot) {
     const statusEl = document.querySelector("[data-partners-status]");
-    if (statusEl && statusEl.getAttribute("data-state") === "loading") statusEl.textContent = dict.partners_status_loading;
-    if (statusEl && statusEl.getAttribute("data-state") === "ok") statusEl.innerHTML = `<b>${dict.partners_status_ok.split(".")[0]}.</b> ${dict.partners_status_ok.split(".").slice(1).join(".").trim()}`.trim();
-    if (statusEl && statusEl.getAttribute("data-state") === "bad") statusEl.innerHTML = `<b>${dict.partners_status_bad.split(".")[0]}.</b> ${dict.partners_status_bad.split(".").slice(1).join(".").trim()}`.trim();
+    const state = statusEl?.getAttribute("data-state") || "";
+    if (statusEl) {
+      if (state === "loading") statusEl.textContent = dict.partners_status_loading;
+      if (state === "ok") statusEl.innerHTML = `<b>${dict.partners_status_ok}</b>`;
+      if (state === "bad") statusEl.innerHTML = `<b>${dict.partners_status_bad}</b>`;
+    }
   }
 
-  if (document.querySelector("[data-clients]")) {
-    const statusEl = document.querySelector("[data-clients-status]");
-    if (statusEl && statusEl.getAttribute("data-state") === "loading") statusEl.textContent = dict.clients_status_loading;
-    if (statusEl && statusEl.getAttribute("data-state") === "ok") statusEl.innerHTML = `<b>${dict.clients_status_ok.split(".")[0]}.</b> ${dict.clients_status_ok.split(".").slice(1).join(".").trim()}`.trim();
-    if (statusEl && statusEl.getAttribute("data-state") === "bad") statusEl.innerHTML = `<b>${dict.clients_status_bad.split(".")[0]}.</b> ${dict.clients_status_bad.split(".").slice(1).join(".").trim()}`.trim();
-  }
-
-  if (lastPartnersPayload && lastPartnersMode) {
-    if (lastPartnersMode === "partners") renderPartnersSections(lastPartnersPayload);
-    if (lastPartnersMode === "clients") renderClientsList(lastPartnersPayload);
-  }
+  if (lastPartnersPayload && lastPartnersMode === "partners") renderPartnersSections(lastPartnersPayload);
 }
 
 function filterNonEmptyRows(rowsRaw) {
-  return rowsRaw.filter((r) => {
-    const name = String(r.Naam || r.name || r.Name || "").trim();
-    return name.length > 0;
-  });
+  return rowsRaw.filter((r) => String(r.Naam || r.name || r.Name || "").trim().length > 0);
 }
 
 function renderPartnersSections(rows) {
@@ -547,30 +551,14 @@ function renderPartnersSections(rows) {
   currentWrap.innerHTML = "";
   pastWrap.innerHTML = "";
 
-  current.forEach((r) => currentWrap.appendChild(renderPartnerCard(r, { showStatus: true, btnKey: "partners_btn_site" })));
-  past.forEach((r) => pastWrap.appendChild(renderPartnerCard(r, { showStatus: true, btnKey: "partners_btn_site" })));
+  current.forEach((r) => currentWrap.appendChild(renderPartnerCard(r, { showStatus: true })));
+  past.forEach((r) => pastWrap.appendChild(renderPartnerCard(r, { showStatus: true })));
 
   const dict = I18N[getLang()] || I18N.nl;
   if (statusEl) {
     statusEl.className = "notice ok";
     statusEl.setAttribute("data-state", "ok");
-    statusEl.innerHTML = `<b>${dict.partners_status_ok.split(".")[0]}.</b> ${dict.partners_status_ok.split(".").slice(1).join(".").trim()}`.trim();
-  }
-}
-
-function renderClientsList(rows) {
-  const listWrap = document.querySelector("[data-clients-list]");
-  const statusEl = document.querySelector("[data-clients-status]");
-  if (!listWrap) return;
-
-  listWrap.innerHTML = "";
-  rows.forEach((r) => listWrap.appendChild(renderPartnerCard(r, { showStatus: false, btnKey: "clients_btn_site" })));
-
-  const dict = I18N[getLang()] || I18N.nl;
-  if (statusEl) {
-    statusEl.className = "notice ok";
-    statusEl.setAttribute("data-state", "ok");
-    statusEl.innerHTML = `<b>${dict.clients_status_ok.split(".")[0]}.</b> ${dict.clients_status_ok.split(".").slice(1).join(".").trim()}`.trim();
+    statusEl.innerHTML = `<b>${dict.partners_status_ok}</b>`;
   }
 }
 
@@ -591,7 +579,11 @@ async function setupPartnersPage() {
   const dict = I18N[getLang()] || I18N.nl;
 
   try {
-    if (statusEl) { statusEl.className = "notice"; statusEl.setAttribute("data-state","loading"); statusEl.textContent = dict.partners_status_loading; }
+    if (statusEl) {
+      statusEl.className = "notice";
+      statusEl.setAttribute("data-state","loading");
+      statusEl.textContent = dict.partners_status_loading;
+    }
     const rows = await loadRowsFromApi();
     lastPartnersPayload = rows;
     renderPartnersSections(rows);
@@ -599,29 +591,7 @@ async function setupPartnersPage() {
     if (statusEl) {
       statusEl.className = "notice bad";
       statusEl.setAttribute("data-state","bad");
-      statusEl.innerHTML = `<b>${dict.partners_status_bad.split(".")[0]}.</b> ${dict.partners_status_bad.split(".").slice(1).join(".").trim()}`.trim();
-    }
-  }
-}
-
-async function setupClientsPage() {
-  const root = document.querySelector("[data-clients]");
-  if (!root) return;
-  lastPartnersMode = "clients";
-
-  const statusEl = document.querySelector("[data-clients-status]");
-  const dict = I18N[getLang()] || I18N.nl;
-
-  try {
-    if (statusEl) { statusEl.className = "notice"; statusEl.setAttribute("data-state","loading"); statusEl.textContent = dict.clients_status_loading; }
-    const rows = await loadRowsFromApi();
-    lastPartnersPayload = rows;
-    renderClientsList(rows);
-  } catch (e) {
-    if (statusEl) {
-      statusEl.className = "notice bad";
-      statusEl.setAttribute("data-state","bad");
-      statusEl.innerHTML = `<b>${dict.clients_status_bad.split(".")[0]}.</b> ${dict.clients_status_bad.split(".").slice(1).join(".").trim()}`.trim();
+      statusEl.innerHTML = `<b>${dict.partners_status_bad}</b>`;
     }
   }
 }
@@ -632,5 +602,4 @@ setupLangToggle();
 applyI18n();
 setupContactForm();
 setupPartnersPage();
-setupClientsPage();
 setYear();
