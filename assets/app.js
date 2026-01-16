@@ -30,7 +30,7 @@ function setupContactForm() {
   const btn = form.querySelector('button[type="submit"]');
 
   const accessKey = keyInput?.value?.trim();
-  if (!accessKey || accessKey === "3ffced50-69c6-4348-adfb-1f1b1d2bb1db") {
+  if (!accessKey || accessKey === "PLAK_HIER_JE_WEB3FORMS_SLEUTEL") {
     if (status) {
       status.className = "notice bad";
       status.innerHTML = "<b>Instellen:</b> Voeg je Web3Forms access key toe om het formulier te activeren.";
@@ -43,18 +43,12 @@ function setupContactForm() {
 
     status.className = "notice";
     status.textContent = "Verzenden…";
-    if (btn) {
-      btn.disabled = true;
-      btn.style.opacity = ".85";
-    }
+    if (btn) { btn.disabled = true; btn.style.opacity = ".85"; }
 
     const payload = new FormData(form);
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: payload
-      });
+      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: payload });
       const data = await res.json();
       if (data.success) {
         status.className = "notice ok";
@@ -68,33 +62,9 @@ function setupContactForm() {
       status.className = "notice bad";
       status.innerHTML = "<b>Netwerkfout.</b> Probeer opnieuw of stuur ons een e-mail.";
     } finally {
-      if (btn) {
-        btn.disabled = false;
-        btn.style.opacity = "1";
-      }
+      if (btn) { btn.disabled = false; btn.style.opacity = "1"; }
     }
   });
-}
-
-async function seatableGetBaseToken({ serverUrl, apiToken }) {
-  const url = `${serverUrl.replace(/\/$/, "")}/api/v2.1/dtable/app-access-token/`;
-  const res = await fetch(url, { method: "GET", headers: { Authorization: `Token ${apiToken}` } });
-  if (!res.ok) throw new Error("SeaTable auth mislukt");
-  const data = await res.json();
-  if (!data || !data.access_token || !data.dtable_uuid) throw new Error("SeaTable auth antwoord ongeldig");
-  return { accessToken: data.access_token, baseUuid: data.dtable_uuid };
-}
-
-async function seatableListRows({ serverUrl, accessToken, baseUuid, tableName, viewName }) {
-  const base = serverUrl.replace(/\/$/, "");
-  const qs = new URLSearchParams();
-  if (viewName) qs.set("view_name", viewName);
-  qs.set("limit", "200");
-  qs.set("convert_keys", "true");
-  const url = `${base}/dtable-server/api/v1/dtables/${encodeURIComponent(baseUuid)}/rows/?table_name=${encodeURIComponent(tableName)}&${qs.toString()}`;
-  const res = await fetch(url, { method: "GET", headers: { Authorization: `Token ${accessToken}` } });
-  if (!res.ok) throw new Error("SeaTable rijen ophalen mislukt");
-  return await res.json();
 }
 
 function el(tag, attrs = {}, children = []) {
@@ -115,73 +85,62 @@ function normalizeTagList(raw) {
 }
 
 function renderPartnerCard(row) {
-  const name = row.Naam || row.Name || "Partner";
-  const description = row.Beschrijving || row.Description || "";
-  const website = row.Website || row.URL || row.Url || row.website || "";
-  const type = row.Type || "";
-  const tags = normalizeTagList(row.Tags || row.labels || row.Labels);
+  const name = row.naam || row.Naam || row.name || row.Name || "Partner";
+  const description = row.beschrijving || row.Beschrijving || row.description || row.Description || "";
+  const website = row.website || row.Website || row.url || row.URL || row.Url || "";
+  const type = row.type || row.Type || "";
+  const tags = normalizeTagList(row.tags || row.Tags || row.labels || row.Labels);
 
-  const title = el("h4", {}, [String(name)]);
-  const desc = description ? el("p", {}, [String(description)]) : null;
+  const card = el("div", { class: "partner" }, [
+    el("h4", {}, [String(name)])
+  ]);
+
+  if (description) card.appendChild(el("p", {}, [String(description)]));
 
   const tagWrap = el("div", { class: "tags" }, []);
   if (type) tagWrap.appendChild(el("span", { class: "tag" }, [String(type)]));
   tags.forEach((t) => tagWrap.appendChild(el("span", { class: "tag" }, [String(t)])));
-
-  const top = el("div", { class: "partnerTop" }, [
-    el("div", { class: "avatar", "aria-hidden": "true" }),
-    el("div", {}, [title])
-  ]);
-
-  const link = website
-    ? el("a", { class: "btn", href: String(website), target: "_blank", rel: "noopener noreferrer", style: "margin-top:10px; justify-content:flex-start" }, ["Website"])
-    : null;
-
-  const card = el("div", { class: "partner" }, [top]);
-  if (desc) card.appendChild(desc);
   if (type || tags.length) card.appendChild(tagWrap);
-  if (link) card.appendChild(link);
+
+  if (website) {
+    card.appendChild(
+      el("a", {
+        class: "btn",
+        href: String(website),
+        target: "_blank",
+        rel: "noopener noreferrer",
+        style: "margin-top:10px; justify-content:flex-start"
+      }, ["Website"])
+    );
+  }
+
   return card;
 }
 
-async function setupPartnersFromSeaTable() {
-  const root = document.querySelector("[data-seatable-partners]");
+async function setupPartnersFromApi() {
+  const root = document.querySelector("[data-partners]");
   if (!root) return;
 
   const status = document.querySelector("[data-partners-status]");
   const currentWrap = document.querySelector("[data-partners-current]");
   const pastWrap = document.querySelector("[data-partners-past]");
 
-  const serverUrl = root.getAttribute("data-server-url") || "";
-  const apiToken = root.getAttribute("data-api-token") || "";
-  const tableName = root.getAttribute("data-table-name") || "Partners";
-  const viewName = root.getAttribute("data-view-name") || "";
   const currentValue = root.getAttribute("data-current-value") || "Actueel";
   const pastValue = root.getAttribute("data-past-value") || "Eerder";
 
-  if (!serverUrl || !apiToken) {
-    if (status) {
-      status.className = "notice bad";
-      status.innerHTML = "<b>Instellen:</b> Voeg je SeaTable server url en API token toe om partners te laden.";
-    }
-    return;
-  }
-
   try {
-    if (status) {
-      status.className = "notice";
-      status.textContent = "Laden…";
-    }
+    if (status) { status.className = "notice"; status.textContent = "Laden…"; }
 
-    const { accessToken, baseUuid } = await seatableGetBaseToken({ serverUrl, apiToken });
-    const rowsData = await seatableListRows({ serverUrl, accessToken, baseUuid, tableName, viewName });
-    const rows = Array.isArray(rowsData?.rows) ? rowsData.rows : [];
+    const res = await fetch("/api/partners", { method: "GET" });
+    if (!res.ok) throw new Error("API error");
+    const data = await res.json();
+    const rows = Array.isArray(data?.rows) ? data.rows : [];
 
     const current = [];
     const past = [];
 
     rows.forEach((r) => {
-      const kind = String(r.Status || r.Categorie || r.Category || r.status || "").trim();
+      const kind = String(r.status || r.Status || r.categorie || r.Categorie || r.category || r.Category || "").trim();
       if (kind.toLowerCase() === currentValue.toLowerCase()) current.push(r);
       else if (kind.toLowerCase() === pastValue.toLowerCase()) past.push(r);
       else current.push(r);
@@ -197,20 +156,14 @@ async function setupPartnersFromSeaTable() {
       past.forEach((r) => pastWrap.appendChild(renderPartnerCard(r)));
     }
 
-    if (status) {
-      status.className = "notice ok";
-      status.innerHTML = "<b>Klaar.</b> De lijst is bijgewerkt.";
-    }
+    if (status) { status.className = "notice ok"; status.innerHTML = "<b>Klaar.</b> De lijst is bijgewerkt."; }
   } catch (e) {
-    if (status) {
-      status.className = "notice bad";
-      status.innerHTML = "<b>Niet gelukt.</b> Controleer SeaTable instellingen en CORS.";
-    }
+    if (status) { status.className = "notice bad"; status.innerHTML = "<b>Niet gelukt.</b> Controleer Vercel ENV en SeaTable instellingen."; }
   }
 }
 
 setupActiveNav();
 setupMobileMenu();
 setupContactForm();
-setupPartnersFromSeaTable();
+setupPartnersFromApi();
 setYear();
