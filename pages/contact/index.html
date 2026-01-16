@@ -14,30 +14,28 @@
       <div class="nav">
         <a class="brand" href="/">
           <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
-          <div>
-            <span>Aven Technologies</span>
-            <small>Web • Design • Systemen</small>
-          </div>
+          <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
         </a>
 
         <nav class="links" aria-label="Hoofdnavigatie">
-          <a data-nav="home" href="/">Home</a>
-          <a data-nav="services" href="/pages/services/">Diensten</a>
-          <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-          <a data-nav="contact" href="/pages/contact/">Contact</a>
+          <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+          <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
         </nav>
 
         <div class="navRight">
-          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="btn small langBtn" type="button" data-lang-toggle>EN</button>
+          <a class="btn primary" data-i18n="nav_quote" href="/pages/contact/">Offerte aanvragen</a>
           <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
         </div>
       </div>
 
       <div class="mobilePanel" data-mobile-panel>
-        <a data-nav="home" href="/">Home</a>
-        <a data-nav="services" href="/pages/services/">Diensten</a>
-        <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-        <a data-nav="contact" href="/pages/contact/">Contact</a>
+        <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+        <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+        <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+        <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
       </div>
     </div>
   </header>
@@ -45,9 +43,9 @@
   <main>
     <section class="pageHead">
       <div class="container">
-        <div class="breadcrumb">Aven / Contact</div>
-        <h1 class="pageTitle">Contact opnemen</h1>
-        <p class="pageDesc">Stuur je vraag of projectinfo. We reageren meestal binnen 1 werkdag.</p>
+        <div class="breadcrumb">Contact</div>
+        <h1 class="pageTitle" data-i18n="contact_title">Contact opnemen</h1>
+        <p class="pageDesc" data-i18n="contact_desc">Stuur je vraag of projectinfo. We reageren meestal binnen 1 werkdag.</p>
       </div>
     </section>
 
@@ -56,11 +54,11 @@
         <div class="split">
           <div class="card">
             <div class="cardTitle">
-              <h3>Formulier</h3>
-              <div class="pill">Web3Forms</div>
+              <h3 data-i18n="contact_form">Formulier</h3>
+              <div class="pill">Contact</div>
             </div>
 
-            <div class="notice" data-form-status>Vul het formulier in en verzend je bericht.</div>
+            <div class="notice" data-form-status data-i18n="contact_status">Vul het formulier in en verzend je bericht.</div>
 
             <form class="form" data-web3form>
               <input type="hidden" name="access_key" value="3ffced50-69c6-4348-adfb-1f1b1d2bb1db">
@@ -69,22 +67,22 @@
 
               <div class="formRow">
                 <div class="field">
-                  <label for="naam">Naam</label>
-                  <input id="naam" name="name" type="text" placeholder="Je naam" required>
+                  <label for="naam" data-i18n="contact_name">Naam</label>
+                  <input id="naam" name="name" type="text" data-i18n-placeholder="contact_name" placeholder="Naam" required>
                 </div>
                 <div class="field">
-                  <label for="email">E-mail</label>
+                  <label for="email" data-i18n="contact_email">E-mail</label>
                   <input id="email" name="email" type="email" placeholder="naam@bedrijf.be" required>
                 </div>
               </div>
 
               <div class="formRow">
                 <div class="field">
-                  <label for="bedrijf">Bedrijf</label>
-                  <input id="bedrijf" name="company" type="text" placeholder="Bedrijfsnaam">
+                  <label for="bedrijf" data-i18n="contact_company">Bedrijf</label>
+                  <input id="bedrijf" name="company" type="text" data-i18n-placeholder="contact_company" placeholder="Bedrijf">
                 </div>
                 <div class="field">
-                  <label for="dienst">Waarover gaat het?</label>
+                  <label for="dienst" data-i18n="contact_about">Waarover gaat het?</label>
                   <select id="dienst" name="service" required>
                     <option value="" selected disabled>Kies een optie</option>
                     <option>Website</option>
@@ -98,40 +96,40 @@
 
               <div class="formRow">
                 <div class="field">
-                  <label for="budget">Budget (optioneel)</label>
-                  <input id="budget" name="budget" type="text" placeholder="U budget dat je max-min kan besteden">
+                  <label for="budget" data-i18n="contact_budget">Budget (optioneel)</label>
+                  <input id="budget" name="budget" type="text" data-i18n-placeholder="contact_budget" placeholder="Budget (optioneel)">
                 </div>
                 <div class="field">
-                  <label for="timing">Timing (optioneel)</label>
-                  <input id="timing" name="timing" type="text" placeholder="Bijv. binnen 2 tot 4 weken">
+                  <label for="timing" data-i18n="contact_timing">Timing (optioneel)</label>
+                  <input id="timing" name="timing" type="text" data-i18n-placeholder="contact_timing" placeholder="Timing (optioneel)">
                 </div>
               </div>
 
               <div class="field">
-                <label for="bericht">Bericht</label>
-                <textarea id="bericht" name="message" placeholder="Wat wil je bouwen of verbeteren? Link naar je huidige site als die er is." required></textarea>
-                <small class="hint">Hoe concreter je vraag, hoe sneller we een duidelijke offerte kunnen maken.</small>
+                <label for="bericht" data-i18n="contact_message">Bericht</label>
+                <textarea id="bericht" name="message" data-i18n-placeholder="contact_message" placeholder="Bericht" required></textarea>
+                <small class="hint" data-i18n="contact_hint">Hoe concreter je vraag, hoe sneller we een duidelijke offerte kunnen maken.</small>
               </div>
 
-              <button class="btn primary" type="submit">Verzenden</button>
+              <button class="btn primary" type="submit" data-i18n="contact_send">Verzenden</button>
             </form>
           </div>
 
           <div class="card">
             <div class="cardTitle">
-              <h3>Gegevens</h3>
-              <div class="pill">Snel contact</div>
+              <h3 data-i18n="contact_info">Gegevens</h3>
+              <div class="pill" data-i18n="contact_quick">Snel contact</div>
             </div>
 
             <div class="stack">
               <div class="tile"><b>E-mail</b><p>info@aventechnologies.be</p></div>
-              <div class="tile"><b>Reactietijd</b><p>Meestal binnen 1 werkdag.</p></div>
-              <div class="tile"><b>Werkwijze</b><p>Korte intake, voorstel, start. Duidelijk en professioneel.</p></div>
-              <div class="notice">Wil je een korte call? Zet je beschikbaarheid in je bericht.</div>
-              <a class="btn" href="/pages/services/" style="justify-content:flex-start">Diensten bekijken</a>
-              <a class="btn ghost" href="/pages/partners/" style="justify-content:flex-start">Partners</a>
+              <div class="tile"><b data-i18n="contact_way">Werkwijze</b><p data-i18n="contact_way_d">Korte intake, voorstel, start. Duidelijk en professioneel.</p></div>
+              <div class="notice" data-i18n="contact_note">Wil je een korte call? Zet je beschikbaarheid in je bericht.</div>
+              <a class="btn" data-i18n="contact_services_btn" href="/pages/services/" style="justify-content:flex-start">Diensten bekijken</a>
+              <a class="btn ghost" data-i18n="contact_partners_btn" href="/pages/partners/" style="justify-content:flex-start">Partners</a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -143,17 +141,14 @@
         <div>
           <div class="brand" style="gap:10px">
             <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
-            <div>
-              <span>Aven Technologies</span>
-              <small>Web • Design • Systemen</small>
-            </div>
+            <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
           </div>
           <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
         </div>
         <div class="footLinks">
-          <a href="/">Home</a>
-          <a href="/pages/services/">Diensten</a>
-          <a href="/pages/klanten/">Klanten</a>
+          <a data-i18n="nav_home" href="/">Home</a>
+          <a data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
           <a href="/pages/privacy/">Privacy</a>
         </div>
       </div>
