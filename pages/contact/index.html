@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Contacteer Aven Technologies voor websites, onderhoud, grafisch ontwerp en systemen."/>
-  <title>Aven Technologies</title>
+  <title>Contact | Aven Technologies</title>
+  <meta name="description" content="Neem contact op met Aven Technologies."/>
+  <link rel="icon" href="/image/favicon.png"/>
   <link rel="stylesheet" href="/assets/styles.css"/>
 </head>
 <body data-page="contact">
@@ -12,7 +13,7 @@
     <div class="container">
       <div class="nav">
         <a class="brand" href="/">
-          <div class="logo" aria-hidden="true"></div>
+          <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
           <div>
             <span>Aven Technologies</span>
             <small>Web • Design • Systemen</small>
@@ -44,11 +45,9 @@
   <main>
     <section class="pageHead">
       <div class="container">
-        <div class="breadcrumb">Contact</div>
+        <div class="breadcrumb">Aven / Contact</div>
         <h1 class="pageTitle">Contact opnemen</h1>
-        <p class="pageDesc">
-          Stuur je vraag of projectinfo door. Hoe concreter, hoe sneller we een voorstel kunnen maken.
-        </p>
+        <p class="pageDesc">Stuur je vraag of projectinfo. Hoe concreter, hoe sneller we kunnen schakelen.</p>
       </div>
     </section>
 
@@ -58,12 +57,13 @@
           <div class="card">
             <div class="cardTitle">
               <h3>Formulier</h3>
+              <div class="pill">Web3Forms</div>
             </div>
 
-            <div class="notice" data-form-status>Vul het formulier in. Je ontvangt een bevestiging na verzending.</div>
+            <div class="notice" data-form-status>Vul het formulier in en verzend je bericht.</div>
 
             <form class="form" data-web3form>
-              <input type="hidden" name="access_key" value="3ffced50-69c6-4348-adfb-1f1b1d2bb1db">
+              <input type="hidden" name="access_key" value="PLAK_HIER_JE_WEB3FORMS_SLEUTEL">
               <input type="hidden" name="subject" value="Nieuwe aanvraag via Aven Technologies">
               <input type="hidden" name="from_name" value="Aven Technologies Website">
 
@@ -78,28 +78,10 @@
                 </div>
               </div>
 
-              <div class="formRow">
-                <div class="field">
-                  <label for="bedrijf">Bedrijf</label>
-                  <input id="bedrijf" name="company" type="text" placeholder="Bedrijfsnaam">
-                </div>
-                <div class="field">
-                  <label for="dienst">Waarover gaat het?</label>
-                  <select id="dienst" name="service" required>
-                    <option value="" selected disabled>Kies een optie</option>
-                    <option>Website</option>
-                    <option>Onderhoud</option>
-                    <option>Grafisch ontwerp</option>
-                    <option>Systemen</option>
-                    <option>Combinatie</option>
-                  </select>
-                </div>
-              </div>
-
               <div class="field">
                 <label for="bericht">Bericht</label>
-                <textarea id="bericht" name="message" placeholder="Wat wil je bouwen of verbeteren? Link naar bestaande website indien van toepassing." required></textarea>
-                <small class="hint">Tip: voeg timing, budgetrange en voorbeelden toe als je die hebt.</small>
+                <textarea id="bericht" name="message" placeholder="Waar kunnen we mee helpen?" required></textarea>
+                <small class="hint">Tip: voeg links, timing en budgetrange toe als je die hebt.</small>
               </div>
 
               <button class="btn primary" type="submit">Verzenden</button>
@@ -108,30 +90,18 @@
 
           <div class="card">
             <div class="cardTitle">
-              <h3>Gegevens</h3>
-              <div class="pill">Snel contact</div>
+              <h3>Info</h3>
+              <div class="pill">Snel</div>
             </div>
 
             <div class="stack">
-              <div class="tile">
-                <b>E-mail</b>
-                <p>info@aventechnologies.be</p>
-              </div>
-              <div class="tile">
-                <b>Reactietijd</b>
-                <p>Meestal binnen 1 werkdag.</p>
-              </div>
-              <div class="tile">
-                <b>Werkgebied</b>
-                <p>België en internationaal (remote).</p>
-              </div>
-              <div class="notice">
-                Liever bellen of een korte intake? Zet je voorkeur in het bericht, dan plannen we dit in.
-              </div>
+              <div class="tile"><b>E-mail</b><p>info@aventechnologies.be</p></div>
+              <div class="tile"><b>Reactietijd</b><p>Meestal binnen 1 werkdag.</p></div>
+              <div class="tile"><b>Werkgebied</b><p>België en remote.</p></div>
+              <div class="notice">Zet je voorkeur (mail/meeting) in je bericht, dan plannen we het efficiënt.</div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   </main>
@@ -141,11 +111,8 @@
       <div class="footerGrid">
         <div>
           <div class="brand" style="gap:10px">
-            <div class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:10px"></div>
-            <div>
-              <span>Aven Technologies</span>
-              <small>Web • Design • Systemen</small>
-            </div>
+            <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
+            <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
           </div>
           <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
         </div>
