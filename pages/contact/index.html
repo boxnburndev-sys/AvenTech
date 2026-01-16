@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contacteer Aven Technologies voor websites, onderhoud, grafisch ontwerp en systemen."/>
+  <title>Aven Technologies</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body data-page="contact">
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <span>Aven Technologies</span>
+            <small>Web • Design • Systemen</small>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Hoofdnavigatie">
+          <a data-nav="home" href="/">Home</a>
+          <a data-nav="services" href="/pages/services/">Diensten</a>
+          <a data-nav="partners" href="/pages/partners/">Partners</a>
+          <a data-nav="contact" href="/pages/contact/">Contact</a>
+        </nav>
+
+        <div class="navRight">
+          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
+        </div>
+      </div>
+
+      <div class="mobilePanel" data-mobile-panel>
+        <a data-nav="home" href="/">Home</a>
+        <a data-nav="services" href="/pages/services/">Diensten</a>
+        <a data-nav="partners" href="/pages/partners/">Partners</a>
+        <a data-nav="contact" href="/pages/contact/">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container">
+        <div class="breadcrumb">Contact</div>
+        <h1 class="pageTitle">Contact opnemen</h1>
+        <p class="pageDesc">
+          Stuur je vraag of projectinfo door. Hoe concreter, hoe sneller we een voorstel kunnen maken.
+        </p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="split">
+          <div class="card">
+            <div class="cardTitle">
+              <h3>Formulier</h3>
+            </div>
+
+            <div class="notice" data-form-status>Vul het formulier in. Je ontvangt een bevestiging na verzending.</div>
+
+            <form class="form" data-web3form>
+              <input type="hidden" name="access_key" value="3ffced50-69c6-4348-adfb-1f1b1d2bb1db">
+              <input type="hidden" name="subject" value="Nieuwe aanvraag via Aven Technologies">
+              <input type="hidden" name="from_name" value="Aven Technologies Website">
+
+              <div class="formRow">
+                <div class="field">
+                  <label for="naam">Naam</label>
+                  <input id="naam" name="name" type="text" placeholder="Je naam" required>
+                </div>
+                <div class="field">
+                  <label for="email">E-mail</label>
+                  <input id="email" name="email" type="email" placeholder="naam@bedrijf.be" required>
+                </div>
+              </div>
+
+              <div class="formRow">
+                <div class="field">
+                  <label for="bedrijf">Bedrijf</label>
+                  <input id="bedrijf" name="company" type="text" placeholder="Bedrijfsnaam">
+                </div>
+                <div class="field">
+                  <label for="dienst">Waarover gaat het?</label>
+                  <select id="dienst" name="service" required>
+                    <option value="" selected disabled>Kies een optie</option>
+                    <option>Website</option>
+                    <option>Onderhoud</option>
+                    <option>Grafisch ontwerp</option>
+                    <option>Systemen</option>
+                    <option>Combinatie</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="bericht">Bericht</label>
+                <textarea id="bericht" name="message" placeholder="Wat wil je bouwen of verbeteren? Link naar bestaande website indien van toepassing." required></textarea>
+                <small class="hint">Tip: voeg timing, budgetrange en voorbeelden toe als je die hebt.</small>
+              </div>
+
+              <button class="btn primary" type="submit">Verzenden</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <div class="cardTitle">
+              <h3>Gegevens</h3>
+              <div class="pill">Snel contact</div>
+            </div>
+
+            <div class="stack">
+              <div class="tile">
+                <b>E-mail</b>
+                <p>info@aventechnologies.be</p>
+              </div>
+              <div class="tile">
+                <b>Reactietijd</b>
+                <p>Meestal binnen 1 werkdag.</p>
+              </div>
+              <div class="tile">
+                <b>Werkgebied</b>
+                <p>België en internationaal (remote).</p>
+              </div>
+              <div class="notice">
+                Liever bellen of een korte intake? Zet je voorkeur in het bericht, dan plannen we dit in.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <div class="brand" style="gap:10px">
+            <div class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:10px"></div>
+            <div>
+              <span>Aven Technologies</span>
+              <small>Web • Design • Systemen</small>
+            </div>
+          </div>
+          <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
+        </div>
+        <div class="footLinks">
+          <a href="/">Home</a>
+          <a href="/pages/services/">Diensten</a>
+          <a href="/pages/partners/">Partners</a>
+          <a href="/pages/privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
