@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aven Technologies</title>
+  <title>Partners | Aven Technologies</title>
   <meta name="description" content="Partners en eerdere samenwerkingen."/>
   <link rel="icon" href="/image/favicon.png"/>
   <link rel="stylesheet" href="/assets/styles.css"/>
@@ -14,30 +14,30 @@
       <div class="nav">
         <a class="brand" href="/">
           <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
-          <div>
-            <span>Aven Technologies</span>
-            <small>Web • Design • Systemen</small>
-          </div>
+          <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
         </a>
 
         <nav class="links" aria-label="Hoofdnavigatie">
-          <a data-nav="home" href="/">Home</a>
-          <a data-nav="services" href="/pages/services/">Diensten</a>
-          <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-          <a data-nav="contact" href="/pages/contact/">Contact</a>
+          <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+          <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-nav="partners" data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+          <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
         </nav>
 
         <div class="navRight">
-          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="btn small langBtn" type="button" data-lang-toggle>EN</button>
+          <a class="btn primary" data-i18n="nav_quote" href="/pages/contact/">Offerte aanvragen</a>
           <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
         </div>
       </div>
 
       <div class="mobilePanel" data-mobile-panel>
-        <a data-nav="home" href="/">Home</a>
-        <a data-nav="services" href="/pages/services/">Diensten</a>
-        <a data-nav="partners" href="/pages/klanten/">Klanten</a>
-        <a data-nav="contact" href="/pages/contact/">Contact</a>
+        <a data-nav="home" data-i18n="nav_home" href="/">Home</a>
+        <a data-nav="services" data-i18n="nav_services" href="/pages/services/">Diensten</a>
+        <a data-nav="partners" data-i18n="nav_partners" href="/pages/partners/">Partners</a>
+        <a data-nav="klanten" data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+        <a data-nav="contact" data-i18n="nav_contact" href="/pages/contact/">Contact</a>
       </div>
     </div>
   </header>
@@ -45,9 +45,9 @@
   <main>
     <section class="pageHead">
       <div class="container">
-        <div class="breadcrumb">Klanten</div>
-        <h1 class="pageTitle">Klanten</h1>
-        <p class="pageDesc">Onze klanten en eerdere klanten. Deze lijst wordt automatisch bijgewerkt.</p>
+        <div class="breadcrumb">Aven / <span data-i18n="partners_title">Partners</span></div>
+        <h1 class="pageTitle" data-i18n="partners_title">Partners</h1>
+        <p class="pageDesc" data-i18n="partners_desc">Actuele partners en eerdere samenwerkingen. Deze lijst wordt automatisch bijgewerkt.</p>
       </div>
     </section>
 
@@ -55,19 +55,19 @@
       <div class="container">
         <div class="card" data-partners data-current-value="Online" data-past-value="Offline">
           <div class="cardTitle">
-            <h3>Overzicht</h3>
-            <div class="pill">Live</div>
+            <h3 data-i18n="partners_overview">Overzicht</h3>
+            <div class="pill" data-i18n="partners_live">Live</div>
           </div>
-          <div class="notice" data-partners-status>Laden…</div>
+          <div class="notice" data-partners-status data-state="loading" data-i18n="partners_status_loading">Laden…</div>
         </div>
 
         <div class="card" style="margin-top:18px">
-          <div class="cardTitle"><h3>Klanten</h3><div class="pill">Online</div></div>
+          <div class="cardTitle"><h3 data-i18n="partners_current">Actueel</h3><div class="pill">Online</div></div>
           <div class="partnerGrid" data-partners-current></div>
         </div>
 
         <div class="card" style="margin-top:18px">
-          <div class="cardTitle"><h3>Eerdere Klanten</h3><div class="pill">Offline</div></div>
+          <div class="cardTitle"><h3 data-i18n="partners_past">Eerder</h3><div class="pill">Offline</div></div>
           <div class="partnerGrid" data-partners-past></div>
         </div>
       </div>
@@ -85,9 +85,10 @@
           <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
         </div>
         <div class="footLinks">
-          <a href="/">Home</a>
-          <a href="/pages/services/">Diensten</a>
-          <a href="/pages/contact/">Contact</a>
+          <a data-i18n="nav_home" href="/">Home</a>
+          <a data-i18n="nav_services" href="/pages/services/">Diensten</a>
+          <a data-i18n="nav_clients" href="/page/klanten/">Klanten</a>
+          <a data-i18n="nav_contact" href="/pages/contact/">Contact</a>
           <a href="/pages/privacy/">Privacy</a>
         </div>
       </div>
