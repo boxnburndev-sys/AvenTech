@@ -5,19 +5,19 @@ async function seatableGetBaseToken({ serverUrl, apiToken }) {
   if (!res.ok) throw new Error(`SeaTable auth ${res.status}: ${text}`);
   let data;
   try { data = JSON.parse(text); } catch { throw new Error("SeaTable auth JSON parse error"); }
-  if (!data?.access_token || !data?.dtable_uuid || !data?.dtable_server) throw new Error("SeaTable auth antwoord mist access_token/dtable_uuid/dtable_server");
-  return { accessToken: data.access_token, baseUuid: data.dtable_uuid, dtableServer: data.dtable_server };
+  if (!data?.access_token || !data?.dtable_uuid) throw new Error("SeaTable auth antwoord mist access_token/dtable_uuid");
+  return { accessToken: data.access_token, baseUuid: data.dtable_uuid };
 }
 
-async function seatableListRowsGateway({ dtableServer, accessToken, baseUuid, tableName, viewName }) {
-  const base = String(dtableServer || "").replace(/\/$/, "");
+async function seatableListRowsGateway({ serverUrl, accessToken, baseUuid, tableName, viewName }) {
+  const base = serverUrl.replace(/\/$/, "");
   const qs = new URLSearchParams();
   qs.set("table_name", tableName);
   if (viewName) qs.set("view_name", viewName);
   qs.set("limit", "200");
   qs.set("convert_keys", "true");
 
-  const url = `${base}/api/v2.1/dtables/${encodeURIComponent(baseUuid)}/rows/?${qs.toString()}`;
+  const url = `${base}/api-gateway/api/v2/dtables/${encodeURIComponent(baseUuid)}/rows/?${qs.toString()}`;
   const res = await fetch(url, { method: "GET", headers: { Authorization: `Token ${accessToken}` } });
   const text = await res.text().catch(() => "");
   if (!res.ok) throw new Error(`SeaTable gateway rows ${res.status}: ${text}`);
@@ -47,8 +47,8 @@ module.exports = async function handler(req, res) {
       return;
     }
 
-    const { accessToken, baseUuid, dtableServer } = await seatableGetBaseToken({ serverUrl, apiToken });
-    const rowsData = await seatableListRowsGateway({ dtableServer, accessToken, baseUuid, tableName, viewName });
+    const { accessToken, baseUuid } = await seatableGetBaseToken({ serverUrl, apiToken });
+    const rowsData = await seatableListRowsGateway({ serverUrl, accessToken, baseUuid, tableName, viewName });
     const rows = Array.isArray(rowsData?.rows) ? rowsData.rows : [];
 
     res.statusCode = 200;
