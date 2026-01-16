@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Partners en eerdere samenwerkingen van Aven Technologies."/>
+  <title>Partners | Aven Technologies</title>
+  <link rel="stylesheet" href="/assets/styles.css"/>
+</head>
+<body data-page="partners">
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <span>Aven Technologies</span>
+            <small>Web • Design • Systemen</small>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Hoofdnavigatie">
+          <a data-nav="home" href="/">Home</a>
+          <a data-nav="services" href="/pages/services/">Diensten</a>
+          <a data-nav="partners" href="/pages/partners/">Partners</a>
+          <a data-nav="contact" href="/pages/contact/">Contact</a>
+        </nav>
+
+        <div class="navRight">
+          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
+        </div>
+      </div>
+
+      <div class="mobilePanel" data-mobile-panel>
+        <a data-nav="home" href="/">Home</a>
+        <a data-nav="services" href="/pages/services/">Diensten</a>
+        <a data-nav="partners" href="/pages/partners/">Partners</a>
+        <a data-nav="contact" href="/pages/contact/">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container">
+        <div class="breadcrumb">Aven / Partners</div>
+        <h1 class="pageTitle">Partners en samenwerkingen</h1>
+        <p class="pageDesc">
+          Hieronder tonen we met wie we samenwerken en wie we in het verleden hebben ondersteund.
+        </p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="card"
+          data-seatable-partners
+          data-server-url="https://cloud.seatable.io"
+          data-api-token="2ead1223ac93579190f73e16fcab359601a30398"
+          data-table-name="Partners"
+          data-view-name=""
+          data-current-value="Actueel"
+          data-past-value="Eerder">
+          <div class="cardTitle">
+            <h3>Overzicht</h3>
+            <div class="pill">Data uit Database</div>
+          </div>
+          <div class="notice" data-partners-status>Instellen: vul Database gegevens in om partners te laden.</div>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <div class="cardTitle">
+            <h3>Actuele partners</h3>
+            <div class="pill">Status: Actueel</div>
+          </div>
+          <div class="partnerGrid" data-partners-current></div>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <div class="cardTitle">
+            <h3>Eerdere samenwerkingen</h3>
+            <div class="pill">Status: Eerder</div>
+          </div>
+          <div class="partnerGrid" data-partners-past></div>
+        </div>
+
+        <div style="margin-top:18px" class="card">
+          <div class="split">
+            <div>
+              <h2 class="h2">Wil je hier tussen staan?</h2>
+              <p class="lead">We voegen partners toe op basis van samenwerking en toestemming.</p>
+            </div>
+            <div style="display:flex;gap:12px;justify-content:flex-end;align-items:center;flex-wrap:wrap">
+              <a class="btn primary" href="/pages/contact/">Contact</a>
+              <a class="btn" href="/pages/services/">Diensten</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <div class="brand" style="gap:10px">
+            <div class="logo" aria-hidden="true" style="width:34px;height:34px;border-radius:10px"></div>
+            <div>
+              <span>Aven Technologies</span>
+              <small>Web • Design • Systemen</small>
+            </div>
+          </div>
+          <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
+        </div>
+        <div class="footLinks">
+          <a href="/">Home</a>
+          <a href="/pages/services/">Diensten</a>
+          <a href="/pages/contact/">Contact</a>
+          <a href="/pages/privacy/">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
