@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Over Mij - Aven Technologies</title>
+  <meta name="description" content="Ontdek het verhaal achter Aven Technologies en oprichter Tristan Vansonhoven."/>
+  <link rel="icon" href="/image/favicon.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .aboutHero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      margin-top: 32px;
+    }
+    
+    .aboutImage {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 24px;
+      border: 2px solid var(--stroke);
+      box-shadow: var(--shadow);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    
+    .aboutImage:hover {
+      transform: scale(1.03) rotate(1deg);
+      box-shadow: 0 28px 64px rgba(59,130,246,.4), 0 8px 20px rgba(0,0,0,.5);
+    }
+    
+    .aboutContent h2 {
+      font-size: clamp(28px, 3vw, 42px);
+      margin: 0 0 20px;
+      letter-spacing: -.8px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    
+    .aboutContent p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    
+    .highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    
+    .funFact {
+      background: linear-gradient(135deg, rgba(59,130,246,.15), rgba(6,182,212,.15));
+      border: 1px solid var(--brand);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-top: 24px;
+      box-shadow: 0 8px 24px rgba(59,130,246,.25);
+    }
+    
+    .funFact strong {
+      color: var(--text);
+      font-size: 18px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    .timeline {
+      margin-top: 48px;
+    }
+    
+    .timelineItem {
+      border-left: 3px solid var(--brand);
+      padding-left: 28px;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    
+    .timelineItem::before {
+      content: '';
+      position: absolute;
+      left: -9px;
+      top: 4px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 0 16px rgba(59,130,246,.6);
+    }
+    
+    .timelineYear {
+      font-family: var(--mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    
+    .timelineItem h3 {
+      font-size: 20px;
+      margin: 0 0 10px;
+      font-weight: 700;
+      letter-spacing: -.3px;
+    }
+    
+    .timelineItem p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    
+    @media (max-width: 980px) {
+      .aboutHero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      
+      .aboutImage {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body data-page="about">
+  <header class="topbar">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="/">
+          <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
+          <div>
+            <span>Aven Technologies</span>
+            <small>Web • Design • Systemen</small>
+          </div>
+        </a>
+
+        <nav class="links" aria-label="Hoofdnavigatie">
+          <a data-nav="home" href="/">Home</a>
+          <a data-nav="services" href="/pages/services/">Diensten</a>
+          <a data-nav="partners" href="/pages/klanten/">Klanten</a>
+          <a data-nav="contact" href="/pages/contact/">Contact</a>
+          <a data-nav="about" href="/pages/about/">Over Ons</a>
+        </nav>
+
+        <div class="navRight">
+          <a class="btn primary" href="/pages/contact/">Offerte aanvragen</a>
+          <button class="mobileToggle" data-mobile-toggle aria-expanded="false" aria-label="Menu">≡</button>
+        </div>
+      </div>
+
+      <div class="mobilePanel" data-mobile-panel>
+        <a data-nav="home" href="/">Home</a>
+        <a data-nav="services" href="/pages/services/">Diensten</a>
+        <a data-nav="partners" href="/pages/klanten/">Klanten</a>
+        <a data-nav="contact" href="/pages/contact/">Contact</a>
+        <a data-nav="about" href="/pages/about/">Over Ons</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pageHead">
+      <div class="container">
+        <div class="breadcrumb">Over Mij</div>
+        <h1 class="pageTitle">Hallo! Ik ben Tristan!</h1>
+        <p class="pageDesc">Het verhaal achter Aven Technologies</p>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="aboutHero">
+          <div class="aboutContent">
+            <h2>Van passie naar <span class="highlight">professie</span></h2>
+            <p>
+              Hallo! Ik ben <strong>Tristan Vansonhoven</strong>, de oprichter van <strong>Aven Technologies</strong>. 
+              Ik richtte dit bedrijf op toen ik pas <span class="highlight">15 jaar oud</span> was, gewoon omdat ik zo'n 
+              enorme passie had voor webdesign, grafisch ontwerp en alles wat met tech te maken heeft.
+            </p>
+            <p>
+              Voor de meeste tieners draait het om games of TikTok, maar ik zat liever te klooien met code, 
+              pixels en designs. En weet je wat? Dat werd mijn ding!
+            </p>
+            <div class="funFact">
+              <strong>Fun Fact</strong>
+              <p style="color: var(--muted); margin: 0; line-height: 1.6;">
+                Mijn eerste klant? <strong style="color: var(--text);">Box N Burn</strong> een samenwerking 
+                die startte toen ik nog maar 15 was in 2025! De oprichter had een webdesigner én graphic designer 
+                nodig, en ik greep die kans met beide handen. Sindsdien maakte en onderhoude hun websites voor hen met 
+                elk seizoen een frisse, vette update.
+              </p>
+            </div>
+          </div>
+          
+          <div style="display: flex; justify-content: center; align-items: center;">
+            <img class="aboutImage" src="/image/person.png" alt="Tristan Vansonhoven - Oprichter Aven Technologies"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="card">
+          <h2 class="h2">Waarom Aven Technologies?</h2>
+          <p class="lead">
+            Het begon allemaal met één idee: moderne, vette websites bouwen voor bedrijven die écht opvallen. 
+            Geen saaie templates, maar custom werk dat past bij wie jij bent.
+          </p>
+          <div class="hr"></div>
+          <div class="grid3">
+            <div class="feature">
+              <div class="featureTop">
+                <span style="font-size: 32px;">💡</span>
+                <h4>Creatief & Fris</h4>
+              </div>
+              <p>Elk project is uniek. Ik ga niet voor standaard oplossingen, maar voor designs die lekker beklijven.</p>
+            </div>
+            
+            <div class="feature">
+              <div class="featureTop">
+                <span style="font-size: 32px;">🚀</span>
+                <h4>Altijd Innoveren</h4>
+              </div>
+              <p>Tech staat niet stil, en ik ook niet. Ik blijf leren, experimenteren en nieuwe dingen uitproberen.</p>
+            </div>
+            
+            <div class="feature">
+              <div class="featureTop">
+                <span style="font-size: 32px;">🤝</span>
+                <h4>Persoonlijk Contact</h4>
+              </div>
+              <p>Je werkt direct met mij geen tussenpersonen, gewoon eerlijke communicatie en samenwerking.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="card">
+          <h2 class="h2">Mijn Journey</h2>
+          <div class="timeline">
+            <div class="timelineItem">
+              <div class="timelineYear">2025</div>
+              <h3>De Start van Aven Technologies</h3>
+              <p>
+                Op 15-jarige leeftijd richtte ik Aven Technologies op. Een naam, een visie, en een laptop – 
+                dat was alles wat ik nodig had om te beginnen.
+              </p>
+            </div>
+            
+            <div class="timelineItem">
+              <div class="timelineYear">2025</div>
+              <h3>Eerste Klant: Box N Burn</h3>
+              <p>
+                Mijn eerste échte project! Ik kende de oprichter en hij had iemand nodig die kon designen én bouwen. 
+                Ik dook erin en leverde een website waar ze nog steeds trots op zijn. Sinds toen werk ik met hen 
+                samen en krijgen ze elk seizoen frisse updates.
+              </p>
+            </div>
+            
+            <div class="timelineItem">
+              <div class="timelineYear">2026</div>
+              <h3>Groei & Nieuwe Projecten</h3>
+              <p>
+                Vandaag werk ik aan meerdere projecten, blijf ik nieuwe skills oppikken en help ik bedrijven om 
+                online echt te knallen. De passie is er nog altijd – misschien zelfs groter dan ooit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="card">
+          <h2 class="h2">Wat kan ik voor jou doen?</h2>
+          <p class="lead">
+            Of je nu een volledig nieuwe website nodig hebt, een rebrand, of gewoon iemand die snapt wat je wil – 
+            ik ben er om jouw visie tot leven te brengen.
+          </p>
+          <div class="hr"></div>
+          <div class="stack">
+            <div class="tile">
+              <b>Webdesign & Development</b>
+              <p>Van concept tot live website – ik regel het allemaal. Modern, responsive en precies zoals jij het wil.</p>
+            </div>
+            <div class="tile">
+              <b>Graphic Design</b>
+              <p>Logo's, branding, visuals – alles om jouw merk visueel sterker te maken.</p>
+            </div>
+            <div class="tile">
+              <b>Onderhoud & Updates</b>
+              <p>Een website is nooit "af". Ik help je om het fris, snel en up-to-date te houden.</p>
+            </div>
+          </div>
+          <div class="hr"></div>
+          <div class="ctaRow">
+            <a class="btn primary" href="/pages/contact/">Laten we praten!</a>
+            <a class="btn" href="/pages/services/">Bekijk mijn diensten</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight">
+      <div class="container">
+        <div class="card" style="text-align: center;">
+          <h2 class="h2">Klaar om samen iets vets te bouwen?</h2>
+          <p class="lead" style="margin: 0 auto 28px;">
+            Heb je een idee, een project of gewoon zin om te brainstormen? Hit me up!
+          </p>
+          <a class="btn primary" href="/pages/contact/" style="font-size: 16px; padding: 14px 24px;">
+            Neem contact op
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <div class="brand" style="gap:10px">
+            <img class="logoImg" src="/image/favicon.png" alt="Aven Technologies"/>
+            <div><span>Aven Technologies</span><small>Web • Design • Systemen</small></div>
+          </div>
+          <div class="legal">© <span id="y"></span> Aven Technologies. Alle rechten voorbehouden.</div>
+        </div>
+        <div class="footLinks">
+          <a href="/">Home</a>
+          <a href="/pages/services/">Diensten</a>
+          <a href="/pages/klanten/">Klanten</a>
+          <a href="/pages/contact/">Contact</a>
+          <a href="/pages/about">Over Ons</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('[data-mobile-toggle]');
+    const panel = document.querySelector('[data-mobile-panel]');
+    if (toggle && panel) {
+      toggle.addEventListener('click', () => {
+        const isOpen = panel.classList.contains('open');
+        panel.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', !isOpen);
+      });
+    }
+
+    const currentPage = document.body.getAttribute('data-page');
+    if (currentPage) {
+      document.querySelectorAll(`[data-nav="${currentPage}"]`).forEach(el => el.classList.add('active'));
+    }
+  </script>
+</body>
+</html>
